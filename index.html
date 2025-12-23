@@ -1,43 +1,61 @@
-<!-- /index.html -->
+<!-- /site/index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hello, GitHub Pages</title>
-  <meta name="description" content="A minimal website deployed with GitHub Pages." />
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <title>Stippling — Monia De Riva</title>
+  <meta name="description" content="Stippling, the art of uniting dots. A minimal landing page." />
+  <!-- Web fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <header class="container">
-    <h1>🚀 Deployed with GitHub Pages</h1>
-    <p id="status">Build OK</p>
-    <nav>
-      <a href="./">Home</a>
-      <a href="https://github.com/USERNAME/REPO">Repo</a>
-    </nav>
+  <!-- Accessibility: keyboard users land here -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <!-- Rounded hero “card” image -->
+      <figure class="hero-card" role="img" aria-label="Stippling—art of uniting dots">
+        <img src="./assets/hero-card.png" alt="Stippling headline artwork showing hand drawing a dotted city." />
+      </figure>
+
+      <h1 class="site-title">Stippling</h1>
+      <p class="subtitle">the art of uniting dots</p>
+      <p class="cta-wrap">
+        <a class="btn btn-accent" href="#founder">Read more</a>
+      </p>
+    </div>
   </header>
 
-  <main class="container">
-    <section>
-      <h2>Getting Started</h2>
-      <ol>
-        <li>Edit <code>index.html</code></li>
-        <li>Commit & push to <code>main</code></li>
-        <li>See changes live in ~1 minute</li>
-      </ol>
+  <main id="main">
+    <section id="founder" class="founder">
+      <div class="container">
+        <h2 class="visually-hidden">Founder</h2>
+        <img class="avatar" src="./assets/founder.png" alt="Portrait of Monia De Riva" />
+        <p class="founder-name">Monia De Riva</p>
+        <p class="founder-role">Founder</p>
+      </div>
     </section>
 
-    <section>
-      <h2>Interactive Demo</h2>
-      <button id="ping">Click me</button>
-      <pre><code id="output">...</code></pre>
+    <section class="full-bleed">
+      <!-- Edge-to-edge banner image -->
+      <img src="./assets/hero-wide.png" alt="Wide stippling illustration banner." />
     </section>
   </main>
 
-  <footer class="container">
-    <small>© <span id="year"></span> USERNAME — Hosted on GitHub Pages</small>
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Stippling. All rights reserved.</small>
+    </div>
   </footer>
+
+  <script>
+    // Keep footer year current.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
